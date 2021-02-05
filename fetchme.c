@@ -33,8 +33,8 @@ int main(void)
 void fetch(void)
 {
 	char * col0 = "\n\t     \t  ______";
-	char * col1 = "\t  O  \t |....  |";
-	char * col2 = "\t -|- \t |....  |";
+	char * col1 = "\t  O  \t |\033[22;31m....\033[0m  |";
+	char * col2 = "\t -|- \t |\033[22;32m....\033[0m  |";
 	char * col3 = "\t / \\ \t/________\\";
 	char * col4 = "\t     \t         ";
 	char * col5 = "\t  Me \tMy computer\n";
