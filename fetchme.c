@@ -91,6 +91,7 @@ void get_kernel(void)
 	sscanf(buffer, "%[^(]", value);
 
 	printf("%s\n", value);
+	fclose(f);
 }
 
 void get_uptime(void)
