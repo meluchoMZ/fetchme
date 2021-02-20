@@ -10,12 +10,18 @@ To be able to use this tool you must have in your system gcc and make (the progr
 ## Media
 Execution example:
 ```
-	     	  ______	 OS: Debian GNU/Linux 10 (buster)
-	  O  	 |....  |	 Kernel: Linux version 4.19.0-14-amd64 
-	 -|- 	 |....  |	 Up: 59 min
-	 / \ 	/________\	 CPU:  Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz
-	     	         	 Memory: 3043 MB / 16316 MB
-	  Me 	My computer
+                     .
+                    / V\
+                  / `  /
+                 <<   |
+                 /    |
+               /      | 	 OS: Debian GNU/Linux 10 (buster)
+             /        | 	 Kernel: Linux version 4.19.0-14-amd64
+           /    \  \ /  	 Up: 50 min
+          (      ) | |  	 CPU:  Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz
+  ________|   _/_  | |  	 Memory: 2856 MB / 16316 MB
+/__________\______)\__)
+
 
 ```
 
