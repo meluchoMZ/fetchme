@@ -32,19 +32,29 @@ int main(void)
 
 void fetch(void)
 {
-	char * col0 = "\n\t     \t  ______";
-	char * col1 = "\t  O  \t |\033[22;31m....\033[0m  |";
-	char * col2 = "\t -|- \t |\033[22;32m....\033[0m  |";
-	char * col3 = "\t / \\ \t/________\\";
-	char * col4 = "\t     \t         ";
-	char * col5 = "\t  Me \tMy computer\n";
+	char * col0 =  "                     .\n"; 
+	char * col1 =  "                    / V\\ \n";
+	char * col2 =  "                  / `  /\n";
+	char * col3 =  "                 <<   |\n";
+	char * col4 =  "                 /    |\n";
+	char * col5 =  "               /      | ";
+	char * col6 =  "             /        | ";
+	char * col7 =  "           /    \\  \\ /  ";
+	char * col8 =  "          (      ) | |  ";
+	char * col9 =  "  ________|   _/_  | |  ";
+	char * col10 = "/__________\\______)\\__)\n";
 
-	printf("%s\t OS: ", col0); get_os();
-	printf("%s\t Kernel: ", col1); get_kernel();
-	printf("%s\t Up: ", col2); get_uptime();
-	printf("%s\t CPU: ", col3); get_CPU_info();
-	printf("%s\t Memory: ", col4); get_mem_info();
-	printf("%s\n", col5);
+	printf("%s", col0);
+	printf("%s", col1);
+	printf("%s", col2);
+	printf("%s", col3);
+	printf("%s", col4);
+	printf("%s\t OS: ", col5); get_os();
+	printf("%s\t Kernel: ", col6); get_kernel();
+	printf("%s\t Up: ", col7); get_uptime();
+	printf("%s\t CPU: ", col8); get_CPU_info();
+	printf("%s\t Memory: ", col9); get_mem_info();
+	printf("%s\n", col10);
 }
 
 void get_os(void)
