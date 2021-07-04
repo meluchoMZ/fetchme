@@ -32,29 +32,11 @@ int main(void)
 
 void fetch(void)
 {
-	char * col0 =  "                     .\n"; 
-	char * col1 =  "                    / V\\ \n";
-	char * col2 =  "                  / `  /\n";
-	char * col3 =  "                 <<   |\n";
-	char * col4 =  "                 /    |\n";
-	char * col5 =  "               /      | ";
-	char * col6 =  "             /        | ";
-	char * col7 =  "           /    \\  \\ /  ";
-	char * col8 =  "          (      ) | |  ";
-	char * col9 =  "  ________|   _/_  | |  ";
-	char * col10 = "/__________\\______)\\__)\n";
-
-	printf("%s", col0);
-	printf("%s", col1);
-	printf("%s", col2);
-	printf("%s", col3);
-	printf("%s", col4);
-	printf("%s\t OS: ", col5); get_os();
-	printf("%s\t Kernel: ", col6); get_kernel();
-	printf("%s\t Up: ", col7); get_uptime();
-	printf("%s\t CPU: ", col8); get_CPU_info();
-	printf("%s\t Memory: ", col9); get_mem_info();
-	printf("%s\n", col10);
+	printf("\t OS: "); get_os();
+	printf("\t Kernel: "); get_kernel();
+	printf("\t Up: "); get_uptime();
+	printf("\t CPU: "); get_CPU_info();
+	printf("\t Memory: "); get_mem_info();
 }
 
 void get_os(void)
