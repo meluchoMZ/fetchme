@@ -148,7 +148,8 @@ void get_mem_info(void)
 	FILE * f;
 	char buffer[128];
 	char key[64];
-	int total=0, available;
+	unsigned long total=0;
+	unsigned long available;
 	char mem_ratio[64];
 
 	if ((f = fopen("/proc/meminfo","r")) == NULL) {
@@ -156,7 +157,7 @@ void get_mem_info(void)
 	}
 
 	while (fgets(buffer, 128, f) != NULL) {
-		sscanf(buffer, "%[^:]:%d", key, &total);
+		sscanf(buffer, "%[^:]:%lu", key, &total);
 		if (strcmp(key, "MemTotal") == 0) {
 			break;
 		}
@@ -170,17 +171,17 @@ void get_mem_info(void)
 	}
 
 	while (fgets(buffer, 128, f) != NULL) {
-		sscanf(buffer, "%[^:]:%d", key, &available);
+		sscanf(buffer, "%[^:]:%lu", key, &available);
 		if (strcmp(key, "MemAvailable") == 0) {
 			break;
 		}
 	}
 	fclose(f);
 
-	// Convirtindo de kB a MB
-	total = total / 1000;
-	available = available / 1000;
+	// Convirtindo de kiB a MiB
+	total = total >> 10;
+	available = available >> 10;
 
-	snprintf(mem_ratio, 64,  "%d MB / %d MB", total - available, total);
+	snprintf(mem_ratio, 64,  "%lu MiB / %lu MiB", total - available, total);
 	printf("%s\n", mem_ratio);
 }
